@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+Thumbs.db
+
+# 3D source model (~65 MB); public/points.bin is the baked output used by the site
+*.glb

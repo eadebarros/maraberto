@@ -1,0 +1,18 @@
+{
+  "name": "pdb-lp",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "bake": "node scripts/bake-points.mjs \"image/bust sculpture 3d model.glb\" public/points.bin 160000 0.04",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}
