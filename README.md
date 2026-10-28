@@ -31,4 +31,10 @@ npm run bake
 
 ```bash
 npm run build   # gera dist/ com index.html e termos.html
+npm start       # serve dist/ em $PORT (padrão 3000)
 ```
+
+## Deploy (Railway)
+
+O Railway usa `railway.json`: build com `npm run build` e start com `npm start`.
+Cadastre `VITE_SHEETS_URL` e `VITE_WHATSAPP_GROUP_URL` em **Variables** do serviço. Elas entram no build, então qualquer mudança exige um novo deploy.

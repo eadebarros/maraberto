@@ -3,16 +3,19 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "bake": "node scripts/bake-points.mjs \"image/bust sculpture 3d model.glb\" public/points.bin 160000 0.04",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node scripts/start.mjs"
   },
   "dependencies": {
-    "three": "^0.170.0"
-  },
-  "devDependencies": {
+    "serve": "^14.2.4",
+    "three": "^0.170.0",
     "vite": "^5.4.10"
   }
 }
