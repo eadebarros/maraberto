@@ -81,6 +81,8 @@ form.addEventListener('submit', async (e) => {
   try {
     // Apps Script doesn't send CORS headers on the redirect, so the response is opaque.
     await fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', body });
+    // GTM: use a Custom Event trigger on "signup_submit" to track conversions.
+    (window.dataLayer = window.dataLayer || []).push({ event: 'signup_submit' });
     form.reset();
     setStatus('');
     showSuccess();
