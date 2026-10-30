@@ -1,6 +1,8 @@
 // Sends the signup form to a Google Apps Script web app that appends a row to a Sheet.
 // The endpoint comes from VITE_SHEETS_URL and the group invite from VITE_WHATSAPP_GROUP_URL (see .env.example).
-const ENDPOINT = import.meta.env.VITE_SHEETS_URL;
+// Trim and drop a stray leading "=" (e.g. "VITE_SHEETS_URL==https://…" pasted into Railway),
+// which would turn it into a relative path posting to our own domain.
+const ENDPOINT = (import.meta.env.VITE_SHEETS_URL || '').trim().replace(/^=+/, '');
 const GROUP_URL = import.meta.env.VITE_WHATSAPP_GROUP_URL;
 
 const form = document.getElementById('signup');
